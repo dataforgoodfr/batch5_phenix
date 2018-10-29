@@ -22,3 +22,14 @@ with move 'PHX_D4G' to '/var/opt/mssql/data/PHX_D4G.mdf',
 move 'PHX_D4G_log' to '/var/opt/mssql/data/PHX_D4G_log.ldf'
 GO
 ```
+
+Driver pour se connecter depuis python :
+
+https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-2017
+
+(Le nom du driver installé se trouve dans dans `/etc/odbcinst.ini`.)
+
+```python
+import pyodbc
+con = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
+```
