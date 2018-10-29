@@ -11,7 +11,7 @@ Restore the database backup:
 ```shell
 sudo apt-get install p7zip-full
 7z x PHX_D4G.7z 
-sudo mv data/PHX_D4G.bak /var/opt/mssql/data/
+sudo mv PHX_D4G.bak /var/opt/mssql/data/
 sqlcmd -S localhost -U SA
 ```
 
